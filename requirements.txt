@@ -1,0 +1,7 @@
+gradio
+deep-translator
+Pillow
+requests
+gtts
+SpeechRecognition
+pydub
