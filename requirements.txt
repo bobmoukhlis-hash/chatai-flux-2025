@@ -1,11 +1,11 @@
-pip>=25.0
-setuptools>=68.0.0
-wheel>=0.42.0
-
-gradio==4.44.0
-deep-translator==1.11.4
-Pillow==10.3.0
-requests==2.31.0
-gtts==2.5.1
-SpeechRecognition==3.10.4
-pydub==0.25.1
+services:
+  - type: web
+    name: chat-ai-flux
+    env: python
+    region: virginia
+    plan: free
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: python app.py
+    pythonVersion: 3.10
