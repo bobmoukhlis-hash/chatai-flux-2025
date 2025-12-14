@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
-# 🔧 Forza aggiornamento pip e installazione pacchetti per Render
+echo "🔧 Aggiorno pip e setuptools..."
 pip install --upgrade pip setuptools wheel
-pip install -r requirements.txt
+
+echo "📦 Installo i pacchetti richiesti..."
+pip install -r requirements.txt || exit 1
+
+echo "✅ Build completata!"
