@@ -1,5 +1,7 @@
+pip>=25.0
 setuptools>=68.0.0
-wheel>=0.41.2
+wheel>=0.42.0
+
 gradio==4.44.0
 deep-translator==1.11.4
 Pillow==10.3.0
