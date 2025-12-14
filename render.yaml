@@ -1,12 +1,10 @@
 services:
   - type: web
-    name: chatai-flux-2025
+    name: chat-ai-flux
     env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
+    region: virginia
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
     startCommand: python app.py
-    envVars:
-      - key: GROQ_API_KEY
-        sync: false
-      - key: HF_TOKEN
-        sync: false
+    plan: free
